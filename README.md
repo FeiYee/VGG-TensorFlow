@@ -38,9 +38,10 @@ Unit.cfg    配置文件说明
     
 自行创建目录 
 
-    data/dataset/
-    data/TFRecode/
-    model/
+    data/dataset/       源数据集位置
+    data/TFRecode/      TFRecode位置
+    model/              模型保存位置
+    log_file/           TensorBoard位置
 
 训练你的模型
 -----------
