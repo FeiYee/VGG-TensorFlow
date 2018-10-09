@@ -3,9 +3,9 @@
     Unit.cfg    配置文件
 
 [Image data]        图像数据
-image_size          图像大小
-train_ratio         训练集占比
-num_classes         分类数目
+    image_size          图像大小
+    train_ratio         训练集占比
+    num_classes         分类数目
 
 [Train data]        训练数据
 num_train           训练集图像数量
