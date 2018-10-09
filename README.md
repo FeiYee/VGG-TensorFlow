@@ -40,6 +40,7 @@ Unit.cfg    配置文件说明
 
     data/dataset/
     data/TFRecode/
+    model/
 
 训练你的模型
 -----------
