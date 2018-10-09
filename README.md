@@ -1,5 +1,10 @@
 # VGGs - model
 
+开发环境：
+    
+    python 3.5
+    TensorFlow 1.3.0
+
 Unit.cfg    配置文件说明
 -----------------------
 
