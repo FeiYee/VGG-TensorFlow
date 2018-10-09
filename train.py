@@ -21,7 +21,6 @@ parser.add_argument("--model",type=str,default=None)
 
 args = parser.parse_args()
 
-CNN = args.cnn_name           # 训练模型选择
 LEARNING_RATE_BASE = args.lr  # 基础学习率
 N_CLASSES = args.classes      # 分类数目
 BATCH_SIZE = args.batch_size  # 批大小
@@ -31,7 +30,6 @@ STEP = args.step              # 迭代步数
 SAVE_NUM = args.save_num      # 保存步长
 MODEL_PATH = args.output      # 模型保存地址
 LOG_NUM = args.log_num        # 输出步长
-MODEL_SIZE = args.model_size  # 模型规模
 MODEL = args.model            # 加载模型继续训练
 
 
