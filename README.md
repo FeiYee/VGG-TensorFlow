@@ -3,19 +3,22 @@
     Unit.cfg    配置文件
 
 [Image data]        图像数据
+
     image_size          图像大小
     train_ratio         训练集占比
     num_classes         分类数目
 
 [Train data]        训练数据
-num_train           训练集图像数量
-learning_rate       学习率
-step                训练迭代步数
-batch_size          训练批度
+
+    num_train           训练集图像数量
+    learning_rate       学习率
+    step                训练迭代步数
+    batch_size          训练批度
 
 [Test data]         测试数据
-num_test            测试集图像数量
-batch_size          测试批度
+
+    num_test            测试集图像数量
+    batch_size          测试批度
 
 --------------------------------------
 
