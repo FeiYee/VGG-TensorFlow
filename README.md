@@ -1,4 +1,4 @@
-# VGG11-19
+# VGGs - model
 
 Unit.cfg    配置文件说明
 -----------------------
@@ -42,3 +42,29 @@ Unit.cfg    配置文件说明
 --------------------------------------
 
     VGG_models.py   VGG11~19前趋关系
+    
+自行创建目录 
+
+    data/dataset/
+    data/TFRecode/
+
+训练你的模型
+-----------
+    1、将数据集放入data/dataset/中，子文件夹名称为标签
+        sample：data/dataset/0/1.jpeg
+                data/dataset/8/46.jpeg
+                ......
+    2、在Unit.cfg中调整分类数目、图像大小以及训练分割占比
+    3、run python3 FlowIO.py 分割数据集并且打包成TFRecode格式
+    4、run python3 train.py 训练数据集
+    训练好的模型将会保存到 model/ 路径下
+    如果你想在某一时刻模型继续训练，可输入 --model=模型路径与模型名称 来指定模型继续训练
+测试你的模型
+-----------
+    1、确保你的TFRecode路径正确，检查Unit.cfg中的图像参数也正确
+    2、run python3 --model=模型路径与模型名
+使用你的模型
+-----------
+    1、确保useModel中的图像大小、分类数目以及分类标签的正确
+    2、run python3 --model=模型路径与模型名
+    
