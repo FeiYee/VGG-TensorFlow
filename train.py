@@ -76,9 +76,9 @@ def train():
     # 标签
     y_ = tf.placeholder(tf.int64, [None,1], name='y-input')
     # 是否处于训练状态
-    is_train = tf.placeholder(tf.bool, [1], name="is_train")
+    is_train = tf.placeholder(tf.bool, name="is_train")
     # 获取结果
-    y = vgg.VGG16A_inference(x,N_CLASSES,is_train[0])
+    y = vgg.VGG16A_inference(x,N_CLASSES,is_train)
 
     loss = losses(y, y_)
     acc = evaluation(y, y_)
@@ -104,7 +104,7 @@ def train():
         for i in range(STEP):
             iamges,labels = sess.run(next_batch)
             _, loss_value,acc_value,merged_value = sess.run([train_op, loss,acc,merged],
-                                           feed_dict={x: iamges, y_: labels,is_train:[True]})
+                                           feed_dict={x: iamges, y_: labels,is_train:True})
             log_summary.add_summary(merged_value,i)
             if i % LOG_NUM == 0:
                 print("After %d training step(s), loss on training batch is %g." % (i, loss_value),"acc : ",acc_value)
